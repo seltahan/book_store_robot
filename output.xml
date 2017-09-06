@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170822 18:30:25.280" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="E:\Work Area\Learning\Selenium - Python\BookStore Robot\Tests\TestSuites\AdminTests.robot" id="s1" name="AdminTests">
+<test id="s1-t1" name="Login with Admin User">
+<kw name="Open Edge Browser on Home URL" library="AdminTests_res">
+<kw name="Open Web Browser" library="AdminPage">
+<arguments>
+<arg>${name}</arg>
+<arg>${Home URL}</arg>
+</arguments>
+<msg timestamp="20170822 18:30:33.508" level="INFO">Starting Edge browser session.</msg>
+<status status="PASS" endtime="20170822 18:30:33.508" starttime="20170822 18:30:25.380"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:30:33.508" starttime="20170822 18:30:25.380"></status>
+</kw>
+<kw name="Go To Admin Page" library="AdminPage">
+<status status="PASS" endtime="20170822 18:30:33.608" starttime="20170822 18:30:33.508"></status>
+</kw>
+<kw name="Login with Username admin and Password admin" library="AdminTests_res">
+<kw name="Login" library="AdminPage">
+<arguments>
+<arg>${uname}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:30:39.889" starttime="20170822 18:30:33.624"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:30:39.889" starttime="20170822 18:30:33.624"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170822 18:30:42.890" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170822 18:30:42.890" starttime="20170822 18:30:39.889"></status>
+</kw>
+<kw name="Verify admin has Administration Menu when logged in" library="AdminTests_res">
+<kw name="Get Cuurent Url" library="AdminPage">
+<assign>
+<var>${current url}</var>
+</assign>
+<msg timestamp="20170822 18:30:42.907" level="INFO">${current url} = http://localhost:8081/AdminMenu.aspx?</msg>
+<status status="PASS" endtime="20170822 18:30:42.907" starttime="20170822 18:30:42.890"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${current url}</arg>
+<arg>${Admin Success URL}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:30:42.908" starttime="20170822 18:30:42.907"></status>
+</kw>
+<kw name="Get User Label" library="AdminPage">
+<assign>
+<var>${current user label}</var>
+</assign>
+<msg timestamp="20170822 18:30:44.977" level="INFO">${current user label} = Administration Menu</msg>
+<status status="PASS" endtime="20170822 18:30:44.977" starttime="20170822 18:30:42.908"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${current user label}</arg>
+<arg>${adminmenu}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:30:44.977" starttime="20170822 18:30:44.977"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:30:44.977" starttime="20170822 18:30:42.890"></status>
+</kw>
+<kw name="Close Web Browser" library="AdminPage">
+<status status="PASS" endtime="20170822 18:30:47.176" starttime="20170822 18:30:44.977"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:30:47.176" critical="yes" starttime="20170822 18:30:25.380"></status>
+</test>
+<test id="s1-t2" name="Add New Member">
+<kw name="Open Edge Browser on Home URL" library="AdminTests_res">
+<kw name="Open Web Browser" library="AdminPage">
+<arguments>
+<arg>${name}</arg>
+<arg>${Home URL}</arg>
+</arguments>
+<msg timestamp="20170822 18:30:53.850" level="INFO">Starting Edge browser session.</msg>
+<status status="PASS" endtime="20170822 18:30:53.850" starttime="20170822 18:30:47.176"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:30:53.850" starttime="20170822 18:30:47.176"></status>
+</kw>
+<kw name="Go To Admin Page" library="AdminPage">
+<status status="PASS" endtime="20170822 18:30:53.935" starttime="20170822 18:30:53.850"></status>
+</kw>
+<kw name="Login with Username admin and Password admin" library="AdminTests_res">
+<kw name="Login" library="AdminPage">
+<arguments>
+<arg>${uname}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:00.220" starttime="20170822 18:30:53.935"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:00.220" starttime="20170822 18:30:53.935"></status>
+</kw>
+<kw name="Click On Memebers Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:02.315" starttime="20170822 18:31:00.220"></status>
+</kw>
+<kw name="Click On Insert Member Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:04.418" starttime="20170822 18:31:02.320"></status>
+</kw>
+<kw name="Add Login Username salma" library="AdminTests_res">
+<kw name="Addlogin" library="AdminPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:06.536" starttime="20170822 18:31:04.421"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:06.536" starttime="20170822 18:31:04.420"></status>
+</kw>
+<kw name="Add Password salma" library="AdminTests_res">
+<kw name="Addpassword" library="AdminPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:08.620" starttime="20170822 18:31:06.536"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:08.620" starttime="20170822 18:31:06.536"></status>
+</kw>
+<kw name="Add Level Member" library="AdminTests_res">
+<kw name="Addlevel" library="AdminPage">
+<arguments>
+<arg>${member}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:10.721" starttime="20170822 18:31:08.620"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:10.721" starttime="20170822 18:31:08.620"></status>
+</kw>
+<kw name="Add First Name salma" library="AdminTests_res">
+<kw name="Addfname" library="AdminPage">
+<arguments>
+<arg>${fname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:12.820" starttime="20170822 18:31:10.721"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:12.820" starttime="20170822 18:31:10.721"></status>
+</kw>
+<kw name="Add Last Name Mosaad" library="AdminTests_res">
+<kw name="Addlname" library="AdminPage">
+<arguments>
+<arg>${lname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:14.921" starttime="20170822 18:31:12.820"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:14.921" starttime="20170822 18:31:12.820"></status>
+</kw>
+<kw name="Add Email salmamosaad@yahoo.com" library="AdminTests_res">
+<kw name="Addemail" library="AdminPage">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:17.036" starttime="20170822 18:31:14.921"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:17.036" starttime="20170822 18:31:14.921"></status>
+</kw>
+<kw name="Click On Insert Button" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:19.083" starttime="20170822 18:31:17.036"></status>
+</kw>
+<kw name="Close Web Browser" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:21.252" starttime="20170822 18:31:19.083"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:21.252" critical="yes" starttime="20170822 18:30:47.176"></status>
+</test>
+<test id="s1-t3" name="Add Members from data file">
+<kw name="Open Edge Browser on Home URL" library="AdminTests_res">
+<kw name="Open Web Browser" library="AdminPage">
+<arguments>
+<arg>${name}</arg>
+<arg>${Home URL}</arg>
+</arguments>
+<msg timestamp="20170822 18:31:27.885" level="INFO">Starting Edge browser session.</msg>
+<status status="PASS" endtime="20170822 18:31:27.885" starttime="20170822 18:31:21.252"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:27.885" starttime="20170822 18:31:21.252"></status>
+</kw>
+<kw name="Go To Admin Page" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:27.970" starttime="20170822 18:31:27.885"></status>
+</kw>
+<kw name="Login with Username admin and Password admin" library="AdminTests_res">
+<kw name="Login" library="AdminPage">
+<arguments>
+<arg>${uname}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:34.224" starttime="20170822 18:31:27.970"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:34.224" starttime="20170822 18:31:27.970"></status>
+</kw>
+<kw name="Click On Memebers Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:36.303" starttime="20170822 18:31:34.224"></status>
+</kw>
+<kw name="Add members from file UsersData.xml" library="AdminTests_res">
+<kw name="Parse Xml" library="XML">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>Tests\\TestResources\\${file name}</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20170822 18:31:36.323" level="INFO">${data} = &lt;Element 'users' at 0x0360DA10&gt;</msg>
+<status status="PASS" endtime="20170822 18:31:36.323" starttime="20170822 18:31:36.319"></status>
+</kw>
+<kw name="Get Elements" library="XML">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${data}</arg>
+<arg>user</arg>
+</arguments>
+<assign>
+<var>@{Users}</var>
+</assign>
+<msg timestamp="20170822 18:31:36.324" level="INFO">@{Users} = [ &lt;Element 'user' at 0x0360D7A0&gt; | &lt;Element 'user' at 0x035A8590&gt; ]</msg>
+<status status="PASS" endtime="20170822 18:31:36.324" starttime="20170822 18:31:36.324"></status>
+</kw>
+<kw type="for" name="${user} IN [ @{Users} ]">
+<kw type="foritem" name="${user} = &lt;Element 'user' at 0x0360D7A0&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170822 18:31:39.341" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:36.325"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${username} = test_user</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${email} = test@user.com</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>password</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${password} = 123456</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>level</arg>
+</arguments>
+<assign>
+<var>${level}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${level} = Member</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>fname</arg>
+</arguments>
+<assign>
+<var>${fname}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${fname} = Test</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>lname</arg>
+</arguments>
+<assign>
+<var>${lname}</var>
+</assign>
+<msg timestamp="20170822 18:31:39.341" level="INFO">${lname} = User</msg>
+<status status="PASS" endtime="20170822 18:31:39.341" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Click On Insert Member Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:41.425" starttime="20170822 18:31:39.341"></status>
+</kw>
+<kw name="Add Login Username ${username}" library="AdminTests_res">
+<kw name="Addlogin" library="AdminPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:43.475" starttime="20170822 18:31:41.426"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:43.475" starttime="20170822 18:31:41.426"></status>
+</kw>
+<kw name="Add Password ${password}" library="AdminTests_res">
+<kw name="Addpassword" library="AdminPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:45.561" starttime="20170822 18:31:43.490"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:45.561" starttime="20170822 18:31:43.475"></status>
+</kw>
+<kw name="Add Level ${level}" library="AdminTests_res">
+<kw name="Addlevel" library="AdminPage">
+<arguments>
+<arg>${member}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:47.629" starttime="20170822 18:31:45.561"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:47.629" starttime="20170822 18:31:45.561"></status>
+</kw>
+<kw name="Add First Name ${fname}" library="AdminTests_res">
+<kw name="Addfname" library="AdminPage">
+<arguments>
+<arg>${fname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:49.730" starttime="20170822 18:31:47.629"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:49.730" starttime="20170822 18:31:47.629"></status>
+</kw>
+<kw name="Add Last Name ${lname}" library="AdminTests_res">
+<kw name="Addlname" library="AdminPage">
+<arguments>
+<arg>${lname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:51.832" starttime="20170822 18:31:49.730"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:51.832" starttime="20170822 18:31:49.730"></status>
+</kw>
+<kw name="Add Email ${email}" library="AdminTests_res">
+<kw name="Addemail" library="AdminPage">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:31:53.932" starttime="20170822 18:31:51.832"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:53.932" starttime="20170822 18:31:51.832"></status>
+</kw>
+<kw name="Click On Insert Button" library="AdminPage">
+<status status="PASS" endtime="20170822 18:31:56.033" starttime="20170822 18:31:53.932"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:31:56.033" starttime="20170822 18:31:36.324"></status>
+</kw>
+<kw type="foritem" name="${user} = &lt;Element 'user' at 0x035A8590&gt;">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20170822 18:31:59.049" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:56.033"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${username} = test_user2</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>email</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${email} = test2@user.com</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>password</arg>
+</arguments>
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${password} = 123456</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>level</arg>
+</arguments>
+<assign>
+<var>${level}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${level} = Member</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>fname</arg>
+</arguments>
+<assign>
+<var>${fname}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${fname} = Test2</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Get Element Text" library="XML">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>lname</arg>
+</arguments>
+<assign>
+<var>${lname}</var>
+</assign>
+<msg timestamp="20170822 18:31:59.049" level="INFO">${lname} = User2</msg>
+<status status="PASS" endtime="20170822 18:31:59.049" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Click On Insert Member Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:01.135" starttime="20170822 18:31:59.049"></status>
+</kw>
+<kw name="Add Login Username ${username}" library="AdminTests_res">
+<kw name="Addlogin" library="AdminPage">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:03.235" starttime="20170822 18:32:01.135"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:03.235" starttime="20170822 18:32:01.135"></status>
+</kw>
+<kw name="Add Password ${password}" library="AdminTests_res">
+<kw name="Addpassword" library="AdminPage">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:05.313" starttime="20170822 18:32:03.235"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:05.313" starttime="20170822 18:32:03.235"></status>
+</kw>
+<kw name="Add Level ${level}" library="AdminTests_res">
+<kw name="Addlevel" library="AdminPage">
+<arguments>
+<arg>${member}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:07.382" starttime="20170822 18:32:05.313"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:07.382" starttime="20170822 18:32:05.313"></status>
+</kw>
+<kw name="Add First Name ${fname}" library="AdminTests_res">
+<kw name="Addfname" library="AdminPage">
+<arguments>
+<arg>${fname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:09.482" starttime="20170822 18:32:07.382"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:09.482" starttime="20170822 18:32:07.382"></status>
+</kw>
+<kw name="Add Last Name ${lname}" library="AdminTests_res">
+<kw name="Addlname" library="AdminPage">
+<arguments>
+<arg>${lname}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:13.651" starttime="20170822 18:32:09.482"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:13.651" starttime="20170822 18:32:09.482"></status>
+</kw>
+<kw name="Add Email ${email}" library="AdminTests_res">
+<kw name="Addemail" library="AdminPage">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:15.753" starttime="20170822 18:32:13.651"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:15.753" starttime="20170822 18:32:13.651"></status>
+</kw>
+<kw name="Click On Insert Button" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:17.833" starttime="20170822 18:32:15.753"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:17.833" starttime="20170822 18:31:56.033"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:17.833" starttime="20170822 18:31:36.324"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:17.833" starttime="20170822 18:31:36.318"></status>
+</kw>
+<kw name="Close Web Browser" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:20.001" starttime="20170822 18:32:17.836"></status>
+</kw>
+<tags>
+<tag>data-driven</tag>
+</tags>
+<status status="PASS" endtime="20170822 18:32:20.017" critical="yes" starttime="20170822 18:31:21.252"></status>
+</test>
+<test id="s1-t4" name="Verify User existence in DB">
+<kw name="Open Db Connection" library="DBConnection">
+<status status="PASS" endtime="20170822 18:32:20.186" starttime="20170822 18:32:20.036"></status>
+</kw>
+<kw name="Verify User salma exists in DB" library="DataBase_res">
+<kw name="User Exists" library="DBConnection">
+<arguments>
+<arg>${user name}</arg>
+</arguments>
+<assign>
+<var>${exists}</var>
+</assign>
+<msg timestamp="20170822 18:32:20.186" level="INFO">verify user exists in DB
+Row returned from DB is : (u'salma', )</msg>
+<msg timestamp="20170822 18:32:20.186" level="INFO">${exists} = True</msg>
+<status status="PASS" endtime="20170822 18:32:20.186" starttime="20170822 18:32:20.186"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${exists}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:20.186" starttime="20170822 18:32:20.186"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:20.186" starttime="20170822 18:32:20.186"></status>
+</kw>
+<kw name="Check User email salmamosaad@yahoo.com exists in DB" library="DataBase_res">
+<kw name="User Email Exists" library="DBConnection">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20170822 18:32:20.202" level="INFO">verify user email exists in DB
+Row returned from DB is : None</msg>
+<status status="PASS" endtime="20170822 18:32:20.202" starttime="20170822 18:32:20.186"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:20.202" starttime="20170822 18:32:20.186"></status>
+</kw>
+<kw name="Close Database Connection" library="DBConnection">
+<status status="PASS" endtime="20170822 18:32:20.202" starttime="20170822 18:32:20.202"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:20.202" critical="yes" starttime="20170822 18:32:20.035"></status>
+</test>
+<test id="s1-t5" name="Add New Book">
+<kw name="Open Edge Browser on Home URL" library="AdminTests_res">
+<kw name="Open Web Browser" library="AdminPage">
+<arguments>
+<arg>${name}</arg>
+<arg>${Home URL}</arg>
+</arguments>
+<msg timestamp="20170822 18:32:26.843" level="INFO">Starting Edge browser session.</msg>
+<status status="PASS" endtime="20170822 18:32:26.844" starttime="20170822 18:32:20.202"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:26.844" starttime="20170822 18:32:20.202"></status>
+</kw>
+<kw name="Go To Admin Page" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:26.907" starttime="20170822 18:32:26.844"></status>
+</kw>
+<kw name="Login with Username admin and Password admin" library="AdminTests_res">
+<kw name="Login" library="AdminPage">
+<arguments>
+<arg>${uname}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:33.163" starttime="20170822 18:32:26.907"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:33.163" starttime="20170822 18:32:26.907"></status>
+</kw>
+<kw name="Click On Books Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:35.211" starttime="20170822 18:32:33.163"></status>
+</kw>
+<kw name="Click On Insert Book Link" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:37.280" starttime="20170822 18:32:35.211"></status>
+</kw>
+<kw name="Add Title Python" library="AdminTests_res">
+<kw name="Addtitle" library="AdminPage">
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:39.328" starttime="20170822 18:32:37.280"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:39.328" starttime="20170822 18:32:37.280"></status>
+</kw>
+<kw name="Add Price 100" library="AdminTests_res">
+<kw name="Addprice" library="AdminPage">
+<arguments>
+<arg>${price}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:41.397" starttime="20170822 18:32:39.328"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:41.397" starttime="20170822 18:32:39.328"></status>
+</kw>
+<kw name="Click On Add Button" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:43.429" starttime="20170822 18:32:41.397"></status>
+</kw>
+<kw name="Close Web Browser" library="AdminPage">
+<status status="PASS" endtime="20170822 18:32:45.586" starttime="20170822 18:32:43.429"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:45.601" critical="yes" starttime="20170822 18:32:20.202"></status>
+</test>
+<test id="s1-t6" name="Verify Book existence in DB">
+<kw name="Open Db Connection" library="DBConnection">
+<status status="PASS" endtime="20170822 18:32:45.601" starttime="20170822 18:32:45.601"></status>
+</kw>
+<kw name="Verify Book Python exists in DB" library="DataBase_res">
+<kw name="Book Exists" library="DBConnection">
+<arguments>
+<arg>${book name}</arg>
+</arguments>
+<assign>
+<var>${Exists}</var>
+</assign>
+<msg timestamp="20170822 18:32:45.601" level="INFO">verify book exists in DB
+Row returned from DB is : (u'Python', )</msg>
+<msg timestamp="20170822 18:32:45.601" level="INFO">${Exists} = True</msg>
+<status status="PASS" endtime="20170822 18:32:45.601" starttime="20170822 18:32:45.601"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${Exists}</arg>
+</arguments>
+<status status="PASS" endtime="20170822 18:32:45.601" starttime="20170822 18:32:45.601"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:45.601" starttime="20170822 18:32:45.601"></status>
+</kw>
+<kw name="Check Price 100 exists in DB" library="DataBase_res">
+<kw name="Price Exists" library="DBConnection">
+<arguments>
+<arg>${price}</arg>
+</arguments>
+<msg timestamp="20170822 18:32:45.617" level="INFO">verify book price exists in DB</msg>
+<status status="PASS" endtime="20170822 18:32:45.617" starttime="20170822 18:32:45.617"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:45.617" starttime="20170822 18:32:45.601"></status>
+</kw>
+<kw name="Close Database Connection" library="DBConnection">
+<status status="PASS" endtime="20170822 18:32:45.617" starttime="20170822 18:32:45.617"></status>
+</kw>
+<status status="PASS" endtime="20170822 18:32:45.617" critical="yes" starttime="20170822 18:32:45.601"></status>
+</test>
+<doc>This test suite covers the Admin functionality</doc>
+<status status="PASS" endtime="20170822 18:32:45.617" starttime="20170822 18:30:25.280"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">data-driven</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="AdminTests" pass="6">AdminTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

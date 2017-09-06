@@ -1,0 +1,18 @@
+<users>
+    <user>
+        <name>test_user</name>
+        <password>123456</password>
+        <level>Member</level>
+        <email>test@user.com</email>
+        <fname>Test</fname>
+        <lname>User</lname>
+    </user>
+    <user>
+        <name>test_user2</name>
+        <password>123456</password>
+        <level>Member</level>
+        <email>test2@user.com</email>
+        <fname>Test2</fname>
+        <lname>User2</lname>
+    </user>
+</users>
