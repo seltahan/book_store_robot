@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   This test suite covers the Login functionality
+Documentation   This test suite covers the Login functionality.
 
 Resource        ../TestResources/LoginTests_res.robot
 
